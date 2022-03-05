@@ -1,0 +1,70 @@
+<h3 class='text-center'>Editing Firm</h3>
+<div class='row'>
+<div class='col-md-12'>
+<%= form_for(@firm, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+<% if @firm.errors.any? %>
+<div class="panel panel-danger col-md-offset-1">
+<div class="panel-heading"> 
+<h2 class="panel-title">
+<%= pluralize(@firm.errors.count, "error") %>
+prohibited this business from being saved: </h2>
+<div class="panel-body"> 
+<ul>
+<% @firm.errors.full_messages.each do |msg| %> 
+<li>
+<%= msg %> 
+</li>
+<% end %> 
+</ul>
+</div> 
+</div>
+</div> 
+<% end %>
+<div class='form-group'>
+<div class='control-label col-md-1'>
+<%= f.label :name %> 
+</div>
+<div class='col-md-11'>
+<%= f.text_field :name, class: 'form-control', placeholder: 'Business Name', autofocus: true %> 
+</div>
+</div>
+<div class='form-group'>
+<div class='control-label col-md-1'>
+<%= f.label :trn %> 
+</div>
+<div class='col-md-11'>
+<%= f.text_field :trn, class: 'form-control', placeholder: 'TRN', autofocus: true %> 
+</div>
+</div>
+<div class='form-group'>
+<div class='control-label col-md-1'>
+<%= f.label :email %> 
+</div>
+<div class='col-md-11'>
+<%= f.text_field :email, class: 'form-control', placeholder: 'email', autofocus: true %> 
+</div>
+</div>
+<div class='form-group'>
+<div class='control-label col-md-1'>
+<%= f.label :phone %> 
+</div>
+<div class='col-md-11'>
+<%= f.text_field :phone, class: 'form-control', placeholder: 'Phone Number', autofocus: true %> 
+</div>
+</div>
+<div class='form-group'>
+<div class='control-label col-md-1'>
+<%= f.label :address %> 
+</div>
+<div class='col-md-11'>
+<%= f.text_field :address, class: 'form-control', placeholder: 'Phone Number', autofocus: true %> 
+</div>
+</div>
+<div class='form-group'>
+<div class='col-md-offset-1 col-md-11'>
+<%= f.submit class: 'btn btn-primary btn-lg pull-right' %> 
+</div>
+</div> 
+<% end %>
+</div> 
+</div>

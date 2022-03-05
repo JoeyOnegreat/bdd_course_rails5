@@ -1,0 +1,27 @@
+<article class="detail-article">
+<h1 class="article-detail-title">
+<%= @firm.name %>
+</h1>
+<div class="glyphicon glyphicon-calendar" id="article-date"> 
+<%= @firm.created_at.strftime("%b %d, %Y") %>
+</div>
+<h2 class="article-detail-title">
+<%= @firm.trn %>
+</h2>
+<h2 class="article-detail-title">
+<%= @firm.phone %>
+</h2>
+<h2 class="article-detail-title">
+<%= @firm.email %>
+</h2>
+<h2 class="article-detail-title">
+<%= @firm.address %>
+</h2>
+<div class="edit-delete">
+<%= link_to "Edit Firm", edit_firm_path(@firm), class: "btn btn-primary btn-lg btn-space" %>
+<%= link_to "Delete Firm", firm_path(@firm),
+method: :delete,
+data: { confirm: "Are you sure you want to delete article?" }, 
+class: "btn btn-primary btn-lg btn-space" %>
+</div>
+</article>

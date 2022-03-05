@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root to: "articles#index"
+  
+  get 'firms/index'
+  root to: "users#index"
 
-  resources :articles
+  resources :users
+  resources :firms
 end
