@@ -29,19 +29,19 @@ RSpec.describe "users", type: :request do
             trn: "124563",email:"joey@onegreatstudio", phone:"784220242",address:"Cornwall Courts"))
     end
 
-    describe 'GET /firmss/:id' do 
-        context 'with existing firm' do
-            before { get "/firms/#{@firm.id}" }
-            it "handles existing firm" do 
+    describe 'GET /customers/:id' do 
+        context 'with existing customer' do
+            before { get "/customers/#{@firm.id}" }
+            it "handles existing customer" do 
                 expect(response.status).to eq 200
             end 
         end
-        context 'with non-existing firm' do 
-            before { get "/firms/xxxxx" }
+        context 'with non-existing customer' do 
+            before { get "/customers/xxxxx" }
 
-            it "handles non-existing firm" do 
+            it "handles non-existing customer" do 
                 expect(response.status).to eq 302
-                flash_message = "The firm you are looking for could not be found"
+                flash_message = "The application you are looking for could not be found"
                 expect(flash[:alert]).to eq flash_message
             end 
         end
