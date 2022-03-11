@@ -1,0 +1,51 @@
+<article class="detail-article">
+<h4 class='text-center'> Customer Details</h4>
+<div class="glyphicon glyphicon-calendar" id="article-date"> 
+<%= @customer.created_at.strftime("%b %d, %Y") %>
+</div>
+<h1 class="article-detail-title">Customer Name:
+<%= @customer.customerFirstName %>-<%= @customer.customerLastName %>
+</h1>
+<h2 class="article-detail-title">
+Customer Email:
+<%= @customer.customerEmail %>
+</h2>
+<h2 class="article-detail-title">
+Customer Phone number:
+<%= @customer.customerPhone %>
+</h2>
+<h4 class='text-center'> Business Details</h4>
+<div class='text-center'>
+<%= @customer.businessLogo %>
+</div>
+<h1 class="article-detail-title">
+Business Name:
+<%= @customer.businessName %>
+</h1>
+<div class="glyphicon glyphicon-calendar" id="article-date"> 
+<%= @customer.created_at.strftime("%b %d, %Y") %>
+</div>
+<h2 class="article-detail-title">
+Business TRN:
+<%= @customer.businessTrn %>
+</h2>
+<h2 class="article-detail-title">
+Business Email:
+<%= @customer.businessEmail %>
+</h2>
+<h2 class="article-detail-title">
+Business Phone number:
+<%= @customer.businessPhone %>
+</h2>
+<h2 class="article-detail-title">
+Business Address
+<%= @customer.businessAddress %>
+</h2>
+<div class="edit-delete">
+<%= link_to "Edit Application", edit_customer_path(@customer), class: "btn btn-primary btn-lg btn-space" %>
+<%= link_to "Delete Application", customer_path(@customer),
+method: :delete,
+data: { confirm: "Are you sure you want to delete application?" }, 
+class: "btn btn-primary btn-lg btn-space" %>
+</div>
+</article>

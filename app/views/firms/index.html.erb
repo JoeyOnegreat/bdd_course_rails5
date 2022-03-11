@@ -1,0 +1,25 @@
+<%= link_to "Create New Firm", new_firm_path, class: "btn btn-primary btn-lg", id: "new-article-btn" %>
+<%= link_to 'Access User section', users_path, class: "btn btn-primary btn-lg" %>
+<% if @firms.empty? %>
+<h1 id="no-articles">No Firms Created</h1>
+<% else %>
+<% @firms.each do |firm| %> 
+<div class="well well-lg">
+<div class="article-title"> 
+<%= link_to firm.name, firm_path(firm) %>
+</div>
+<div class="article-title"> 
+<%= firm.trn %>
+</div>
+<div class="article-title"> 
+<%= firm.email %>
+</div>
+<div class="article-title"> 
+<%= firm.phone %>
+</div>
+<div class="article-title"> 
+<%= firm.address %>
+</div>
+</div> 
+<% end %> 
+<% end %>
