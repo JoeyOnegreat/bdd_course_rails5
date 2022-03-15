@@ -17,6 +17,8 @@ Customer Phone number:
 <h4 class='text-center'> Business Details</h4>
 <div class='text-center'>
 <%= @customer.businessLogo %>
+<%= image_tag url_for(@customer.businessLogo) %>
+
 </div>
 <h1 class="article-detail-title">
 Business Name:
@@ -42,6 +44,7 @@ Business Address
 <%= @customer.businessAddress %>
 </h2>
 <div class="edit-delete">
+<%= link_to "Update Approve/Reject", edit_customer_path(@customer), class: "btn btn-primary btn-lg btn-space" %>
 <%= link_to "Edit Application", edit_customer_path(@customer), class: "btn btn-primary btn-lg btn-space" %>
 <%= link_to "Delete Application", customer_path(@customer),
 method: :delete,

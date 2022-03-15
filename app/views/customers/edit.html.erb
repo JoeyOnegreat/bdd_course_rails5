@@ -20,6 +20,38 @@ prohibited this application from being saved: </h2>
 </div>
 </div> 
 <% end %>
+<div class="'text-center'">
+<select class="form-select " aria-label="Default select example">
+  <option selected>Approve/Reject</option>
+  <option value="true">Approve</option>
+  <option value="false">Reject</option>
+</select>
+</div>
+<h4 class='text-center'> Customer Details</h4>
+<div class='form-group'>
+<div class='control-label col-md-1'>
+<%= f.label :'Customer First Name '%> 
+</div>
+<div class='col-md-11'>
+<%= f.text_field :customerFirstName, class: 'form-control', placeholder: 'Customer first Name', autofocus: true %> 
+</div>
+</div>
+<div class='form-group'>
+<div class='control-label col-md-1'>
+<%= f.label :'customer Last Name' %> 
+</div>
+<div class='col-md-11'>
+<%= f.text_field :customerLastName, class: 'form-control', placeholder: 'Customer last Name', autofocus: true %> 
+</div>
+</div>
+<div class='form-group'>
+<div class='control-label col-md-1'>
+<%= f.label :'customer Email' %> 
+</div>
+<div class='col-md-11'>
+<%= f.text_field :customerEmail, class: 'form-control', placeholder: 'Customer email', autofocus: true %> 
+</div>
+</div>
 <div class='form-group'>
 <div class='control-label col-md-1'>
 <%= f.label :'customer Phone' %> 
@@ -28,6 +60,7 @@ prohibited this application from being saved: </h2>
 <%= f.text_field :customerPhone, class: 'form-control', placeholder: 'Customer phone Number', autofocus: true %> 
 </div>
 </div>
+<h4 class='text-center'> Business Details</h4>
 <div class='form-group'>
 <div class='control-label col-md-1'>
 <%= f.label :'business Name' %> 
