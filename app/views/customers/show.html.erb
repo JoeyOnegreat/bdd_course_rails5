@@ -39,10 +39,7 @@ Business Email:
 Business Phone number:
 <%= @customer.businessPhone %>
 </h2>
-<h2 class="article-detail-title">
-Business Address
-<%= @customer.businessAddress %>
-</h2>
+
 <div class="edit-delete">
 <%= link_to "Update Approve/Reject", edit_customer_path(@customer), class: "btn btn-primary btn-lg btn-space" %>
 <%= link_to "Edit Application", edit_customer_path(@customer), class: "btn btn-primary btn-lg btn-space" %>

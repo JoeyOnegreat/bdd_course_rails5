@@ -21,6 +21,9 @@ prohibited this Application from being saved: </h2>
 </div> 
 <% end %>
 <h4 class='text-center'> Customer Details</h4>
+<div class="text-center " style="display:none"> 
+<%= f.select(:status, :Reject => 'false', :Approve => 'true') %>
+</div>
 <div class='form-group'>
 <div class='control-label col-md-1'>
 <%= f.label :'Customer First Name '%> 
@@ -91,15 +94,49 @@ prohibited this Application from being saved: </h2>
 <%= f.label :'business Phone' %> 
 </div>
 <div class='col-md-11'>
-<%= f.text_field :businessPhone, class: 'form-control', placeholder: 'Business address', autofocus: true %> 
+<%= f.text_field :businessPhone, class: 'form-control', placeholder: 'Business Phone', autofocus: true %> 
+</div>
+</div>
+
+<h4 class='text-center'> Business Address</h4>
+<div class='form-group'>
+<div class='control-label col-md-1'>
+<%= f.label :'Street' %> 
+</div>
+<div class='col-md-11'>
+<%= f.text_field :street, class: 'form-control', placeholder: 'Street eg 44 main', autofocus: true %> 
 </div>
 </div>
 <div class='form-group'>
 <div class='control-label col-md-1'>
-<%= f.label :'business Address' %> 
+<%= f.label :'City' %> 
 </div>
 <div class='col-md-11'>
-<%= f.text_field :businessAddress, class: 'form-control', placeholder: 'Business phone Number', autofocus: true %> 
+<%= f.text_field :city, class: 'form-control', placeholder: 'City eg Montego bay', autofocus: true %> 
+</div>
+</div>
+<div class='form-group'>
+<div class='control-label col-md-1'>
+<%= f.label :'State' %> 
+</div>
+<div class='col-md-11'>
+<%= f.text_field :state, class: 'form-control', placeholder: 'State eg st James', autofocus: true %> 
+</div>
+</div>
+<div class='form-group'>
+<div class='control-label col-md-1'>
+<%= f.label :'Zip Code' %> 
+</div>
+<div class='col-md-11'>
+<%= f.text_field :zipcode, class: 'form-control', placeholder: 'Zip code eg 000000', autofocus: true %> 
+</div>
+</div>
+<div class='form-group'>
+<div class='control-label col-md-1'>
+<%= f.label :'Country' %> 
+</div>
+<div class='col-md-11'>
+<%= f.text_field :country, class: 'form-control', placeholder: 'Country eg Jamaica', autofocus: true %> 
 </div>
 </div>
 <div class='form-group'>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_09_182758) do
+ActiveRecord::Schema.define(version: 2022_03_15_232918) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -42,10 +42,15 @@ ActiveRecord::Schema.define(version: 2022_03_09_182758) do
     t.string "businessLogo"
     t.integer "businessTrn"
     t.string "businessEmail"
-    t.string "businessAddress"
     t.integer "businessPhone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status"
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.string "zipcode"
+    t.string "country"
   end
 
   create_table "firms", force: :cascade do |t|

@@ -3,7 +3,10 @@ class CustomersController < ApplicationController
 
   def index
     @customers = Customer.all
-    
+  end
+
+  def approve
+    @approves = Customer.all
   end
 
   def new
@@ -58,6 +61,6 @@ class CustomersController < ApplicationController
 
   def customer_params
   params.require(:customer).permit(:customerFirstName, :customerLastName, :customerPhone, :customerEmail, :businessName, 
-    :businessLogo, :businessTrn, :businessEmail, :businessAddress, :businessPhone) 
+    :businessLogo, :businessTrn, :businessEmail, :businessPhone, :street, :city, :state, :zipcode, :country, :status ) 
   end
 end

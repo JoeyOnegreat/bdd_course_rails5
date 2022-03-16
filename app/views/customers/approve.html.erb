@@ -1,0 +1,26 @@
+<h2 class='text-center'>Approve Businesses</h2>
+<% if @approves.empty? %>
+<h1 id="no-articles">No Applications Created</h1>
+<% else %>
+    <% @approves.each do |customer| %> 
+    <% if customer.status!='false' %>
+    <div class="well well-lg">
+    <div class="article-title"> 
+    <%= customer.customerFirstName %>-<%= customer.customerLastName %>
+    </div>
+    <div class="article-title"> 
+    <%= customer.customerPhone %>
+    </div>
+    <div class="article-title"> 
+    <%= customer.customerEmail %>
+    </div>
+    <div class="article-title"> 
+    <%= customer.businessName %>
+    </div>
+    <h4><%= link_to "See details", customer_path(customer) %><h4>
+    </div> 
+    <% else %>
+    
+    <% end %> 
+<% end %> 
+<% end %>

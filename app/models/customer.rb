@@ -20,7 +20,13 @@ class Customer < ApplicationRecord
     validates :businessPhone, length: { minimum: 10, maximum: 10 }
     validates :businessPhone, numericality: { only_integer: true }
     
-    validates :businessAddress, presence: true
+    validates :street, presence: true
+    validates :city, presence: true
+    validates :state, presence: true
+    validates :zipcode, presence: true
+    validates :country, presence: true
+
+
 
     
     has_one_attached :businessLogo
@@ -42,4 +48,5 @@ class Customer < ApplicationRecord
     end
 
     default_scope { order(created_at: :desc) }
+    
 end
